@@ -1,0 +1,72 @@
+.inner-btn-container{
+    width: 30% !important;
+}
+
+
+/*KEYFRAMES*/
+@keyframes dynamic-insertion {
+
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes animation-slide-left-right{
+    from{
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    to{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-to-left {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-to-right {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.dynamic-slide-left{
+    transform-origin: 50% 0;
+    animation: slide-to-left .3s linear;
+}
+
+.dynamic-slide-right{
+    transform-origin: 50% 0;
+    animation: slide-to-right .4s linear;
+}
+
+.dynamic-object{
+    animation: dynamic-insertion .4s linear;
+}
+
+.slide-to-right{
+    animation: animation-slide-left-right .2s linear;
+}
+
+/*.flex-gap-sm{*/
+/*    gap: 4rem;*/
+/*}*/

@@ -44,7 +44,6 @@ const MainPage = () =>{
          }
         }
 
-
     const updateSection = () =>{
         setSection(strategyChoiceMenu)
     }
@@ -91,7 +90,6 @@ const MainPage = () =>{
             {!isLoading && error && <Section className='is-small'>
                 <ErrorNotification text={error}></ErrorNotification>
             </Section>}
-
             {isLoading ? <progress className="progress is-small is-primary" max="100">15%</progress> : null}
             <Footer></Footer>
         </Fragment>

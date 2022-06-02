@@ -39,7 +39,6 @@ const MainPage = () =>{
              )
              setIsLoading(false)
          }catch(err){
-             console.log(typeof err)
              setIsLoading(false)
             setError(err.message)
          }

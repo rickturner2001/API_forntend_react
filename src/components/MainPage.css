@@ -51,12 +51,12 @@
 
 .dynamic-slide-left{
     transform-origin: 50% 0;
-    animation: slide-to-left .3s linear;
+    animation: slide-to-left .8s ease-out;
 }
 
 .dynamic-slide-right{
     transform-origin: 50% 0;
-    animation: slide-to-right .4s linear;
+    animation: slide-to-right .8s ease-out;
 }
 
 .dynamic-object{

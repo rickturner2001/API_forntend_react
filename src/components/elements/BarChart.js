@@ -6,6 +6,7 @@ const BarChart = (props) =>{
                 <Bar
                     data={props.data}
                     options={{
+                        responsive: true,
                         plugins: {
                             title: {
                                 display: true,

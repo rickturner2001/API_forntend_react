@@ -2,7 +2,7 @@ import Tag from "./elements/Tag";
 
 const BreadthTable = (props) =>{
 
-    const classes = "table " + (props.className ? props.className : null)
+    const classes = "table has-text-centered is-bordered " + (props.className ? props.className : null)
 
     const fixUnderscoredKey = (key) =>{
         let splitKey = key.split("_")
@@ -21,25 +21,13 @@ const BreadthTable = (props) =>{
         return value[0]
     })
 
-    const tickerStrategyStatus = (ticker) => {
-        const tickerData = []
-        for (let strategy of strategies) {
-            tickerData.push(props.tableData.generalTableData[ticker][strategy].status)
-        }
-        return tickerData
-    }
-    let strategiesData = tickers.map((ticker) =>tickerStrategyStatus(ticker))
-    strategiesData = strategiesData.map((listData, index) =>{
-        listData.unshift(strategies[index])
-        return listData
-    })
     const tableHeads = tickers.map((ticker, index) =>{
-        return <th key={index}>{ticker}</th>
+        return <th className='hes-text-centered' style={{textAlign: 'center'}} key={index}>{ticker}</th>
     })
-    const tableRows = strategiesData.map((row, index) =>{
+    const tableRows = props.tableData.tableRows.map((row, index) =>{
 
-        let [strategy, ...status] = row
-        console.log("status: " + status)
+        let [strategy, status] = row
+
         strategy = fixUnderscoredKey(strategy)
         return(
             <tr key={(index + 1) * 2}>
@@ -57,7 +45,7 @@ const BreadthTable = (props) =>{
     return(
         <table className={classes}>
             <thead>
-                <tr className='is-selected'>
+                <tr className='is-selected has-text-centered'>
                     <th key={1991} className='has-text-centered'>Label</th>
                     {tableHeads}
                 </tr>
